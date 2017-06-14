@@ -1,0 +1,1 @@
+from clipSync import app
