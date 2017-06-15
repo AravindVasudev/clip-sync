@@ -1,6 +1,6 @@
 ![](screenshots/1.png)
 # clip-sync
-clip-sync serves the text and images from your clipboard with the network.
+clip-sync serves the text and images from your clipboard within the network.
 
 ## Index
   * [Dependencies](#dependencies)
