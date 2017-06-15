@@ -3565,6 +3565,10 @@ socket.on('message', function (clip) {
   clipboard.innerText = clip;
 });
 
+socket.on('image', function (clip) {
+  clipboard.innerHTML = '<img src=' + clip + ' height=auto width=100% />';
+});
+
 /***/ }),
 /* 26 */
 /***/ (function(module, exports) {
