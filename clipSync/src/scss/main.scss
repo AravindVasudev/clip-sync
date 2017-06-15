@@ -1,33 +1,42 @@
 body {
+  // CSS Reset
   padding: 0;
   margin: 0;
+
+  // Design
   background: #F8ECC2;
 }
 
 .container {
+  // Size
   width: 100%;
   height: 100%;
 
+  // Alignment
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #clip {
+  // Size
   width: 70%;
   height: 80%;
-  white-space: pre-wrap;
 
+  // Design
   background: #F8ECC2 url('../images/linedpaper.png');
   font-family: monospace;
   font-size: 1em;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  white-space: pre-wrap;
 }
 
+// Removes content focus outline
 [contenteditable]:focus {
     outline: 0px solid transparent;
 }
 
+// fullscreen #clip on small screens
 @media only screen and (max-width: 768px) {
   #clip {
     width: 100%;

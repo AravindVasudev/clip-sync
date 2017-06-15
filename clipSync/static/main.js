@@ -3558,13 +3558,15 @@ var _socket2 = _interopRequireDefault(_socket);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var socket = (0, _socket2.default)();
-var clipboard = document.querySelector('#clip');
+var socket = (0, _socket2.default)(); // Socket Init
+var clipboard = document.querySelector('#clip'); // clipboard
 
+// On text content
 socket.on('message', function (clip) {
   clipboard.innerText = clip;
 });
 
+// On image content
 socket.on('image', function (clip) {
   clipboard.innerHTML = '<img src=' + clip + ' height=auto width=100% />';
 });
@@ -3845,7 +3847,7 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  padding: 0;\n  margin: 0;\n  background: #F8ECC2; }\n\n.container {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n#clip {\n  width: 70%;\n  height: 80%;\n  white-space: pre-wrap;\n  background: #F8ECC2 url(" + __webpack_require__(40) + ");\n  font-family: monospace;\n  font-size: 1em;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }\n\n[contenteditable]:focus {\n  outline: 0px solid transparent; }\n\n@media only screen and (max-width: 768px) {\n  #clip {\n    width: 100%;\n    height: 100%; } }\n", ""]);
+exports.push([module.i, "body {\n  padding: 0;\n  margin: 0;\n  background: #F8ECC2; }\n\n.container {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n#clip {\n  width: 70%;\n  height: 80%;\n  background: #F8ECC2 url(" + __webpack_require__(40) + ");\n  font-family: monospace;\n  font-size: 1em;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  white-space: pre-wrap; }\n\n[contenteditable]:focus {\n  outline: 0px solid transparent; }\n\n@media only screen and (max-width: 768px) {\n  #clip {\n    width: 100%;\n    height: 100%; } }\n", ""]);
 
 // exports
 
