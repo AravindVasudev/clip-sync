@@ -5,7 +5,8 @@ module.exports = {
   entry: './clipSync/src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'clipSync/static'),
-    filename: 'main.js'
+    filename: 'main.js',
+    publicPath: '/static/'
   },
   module: {
     rules: [{
@@ -20,6 +21,10 @@ module.exports = {
       test: /\.js$/,
       loader: "babel-loader", exclude: /node_modules/,
       query: { presets:['es2015'] }
+    },
+    {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      loader: 'file-loader'
     }
   ]
   }

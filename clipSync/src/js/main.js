@@ -2,8 +2,8 @@ import '../scss/main.scss';
 import Server from 'socket.io-client';
 
 const socket = Server();
-const container = document.querySelector('.container');
+const clipboard = document.querySelector('#clip');
 
 socket.on('message', (clip) => {
-  container.innerText = clip;
+  clipboard.innerText = clip;
 });
